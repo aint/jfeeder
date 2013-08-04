@@ -8,4 +8,35 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.5</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <header>${basedir}/LICENSE</header>
+                    <aggregate>true</aggregate>
+                    <includes>
+                        <include>**/test/**</include>
+                        <include>**/main/**</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*.properties</exclude>
+                    </excludes>
+                    <useDefaultExcludes>true</useDefaultExcludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
