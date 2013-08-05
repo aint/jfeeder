@@ -9,6 +9,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -31,6 +32,7 @@ public class Feed extends Entity {
     private Date publishedDate;
     private String title;
     private List<String> supportedFeedTypes = new ArrayList<String>();
+    private List<FeedEntry> entries = new ArrayList<FeedEntry>();
 
     /**
      * The default constructor for hibernate.
@@ -214,6 +216,22 @@ public class Feed extends Entity {
      */
     public void setSupportedFeedTypes(List<String> supportedFeedTypes) {
         this.supportedFeedTypes = supportedFeedTypes;
+    }
+
+    /**
+     * @return the feed entries
+     */
+    @OneToMany(mappedBy = "feed")
+    public List<FeedEntry> getEntries() {
+        return entries;
+    }
+
+    /**
+     * @param entries
+     *            the feed entries to set
+     */
+    public void setEntries(List<FeedEntry> entries) {
+        this.entries = entries;
     }
 
     /**
