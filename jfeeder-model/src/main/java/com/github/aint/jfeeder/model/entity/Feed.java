@@ -9,6 +9,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -33,6 +34,7 @@ public class Feed extends Entity {
     private String title;
     private List<String> supportedFeedTypes = new ArrayList<String>();
     private List<FeedEntry> entries = new ArrayList<FeedEntry>();
+    private User user;
 
     /**
      * The default constructor for hibernate.
@@ -59,9 +61,11 @@ public class Feed extends Entity {
      *            the feed's published date
      * @param title
      *            the feed's title
+     * @param user
+     *            the feed's user
      */
     public Feed(String author, String description, String feedImageUrl, String feedType, String language, String link,
-            Date publishedDate, String title) {
+            Date publishedDate, String title, User user) {
         this.author = author;
         this.description = description;
         this.feedImageUrl = feedImageUrl;
@@ -70,6 +74,7 @@ public class Feed extends Entity {
         this.link = link;
         this.publishedDate = publishedDate;
         this.title = title;
+        this.user = user;
     }
 
     /**
@@ -235,6 +240,23 @@ public class Feed extends Entity {
     }
 
     /**
+     * @return the user
+     */
+    @ManyToOne
+    @JoinColumn(name = "FK_USER", nullable = false)
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user
+     *            the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
      * Returns a string representation of the feed.
      * 
      * @return a string representation of the object
@@ -253,6 +275,7 @@ public class Feed extends Entity {
                 + ", publishedDate=" + publishedDate
                 + ", title=" + title
                 + ", supportedFeedTypes=" + supportedFeedTypes
+                + ", user.username=" + user.getUsername()
                 + "]";
     }
 
