@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <user user_id="1"
+          uuid="9cd75bac-102b-4aae-a185-c075d0a47891"
+          email="leo.messi@gmail.com"
+          password="password"
+          username="messi" />
+    <user user_id="2"
+          uuid="9cd75bac-102b-4aae-a185-c075d0a47892"
+          email="c.ronaldo@gmail.com"
+          password="password"
+          username="ronaldo" />
+
+    <feed feed_id="1"
+          uuid="eh74hfs7-5nf2-l421l-8a21-nf307fndkw1"
+          author=""
+          description="Some Very Interesting Feed"
+          image_url=""
+          type="rss_2.0"
+          language="English"
+          link="http://interestingfeed.com"
+          published_date="2013-08-27"
+          title="Title 1"
+          fk_user="1" />
+    <feed feed_id="2"
+          uuid="eh74hfs7-5nf2-l421l-8a21-nf307fndkw2"
+          author=""
+          description="Some Not Interesting Feed"
+          image_url=""
+          type="rss_2.0"
+          language="English"
+          link="http://notinterestingfeed.com"
+          published_date="2013-06-13"
+          title="Title 2"
+          fk_user="1" />
+          
+    <feed_entry feed_entry_id="1"
+                uuid="8h4ne2l1-b20jr-9d63ls-0cz2-lk730fnmqp1"
+                author="Joshua Bloch"
+                description="Effective Java. Chapter 1"
+                link="http://effectivejava.com/1"
+                published_date="2013-06-10"
+                title="Chapter 1"
+                fk_feed="1" />
+    <feed_entry feed_entry_id="2"
+                uuid="8h4ne2l1-b20jr-9d63ls-0cz2-lk730fnmqp2"
+                author="Some Author"
+                description="My cool story"
+                link="http://trololo.com/2"
+                published_date="2013-07-30"
+                title="True Story"
+                fk_feed="1" />
+</dataset>
