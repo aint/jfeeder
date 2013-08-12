@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <user user_id="1"
+          uuid="9cd75bac-102b-4aae-a185-c075d0a47891"
+          email="leo.messi@gmail.com"
+          password="password"
+          username="messi" />
+    <user user_id="2"
+          uuid="9cd75bac-102b-4aae-a185-c075d0a47892"
+          email="c.ronaldo@gmail.com"
+          password="password"
+          username="ronaldo" />
+    <user user_id="3"
+          uuid="9cd75bac-102b-4aae-a185-c075d0a47893"
+          email="f.lampard@gmail.com"
+          password="111111"
+          username="f.lampard" />
+</dataset>
