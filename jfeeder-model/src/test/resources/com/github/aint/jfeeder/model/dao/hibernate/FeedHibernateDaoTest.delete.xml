@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <feed feed_id="1"
+          uuid="eh74hfs7-5nf2-l421l-8a21-nf307fndkw1"
+          author=""
+          description="Some Very Interesting Feed"
+          image_url=""
+          type="rss_2.0"
+          language="English"
+          link="http://interestingfeed.com"
+          published_date="2013-08-27"
+          title="Title 1"
+          fk_user="1" />
+</dataset>
