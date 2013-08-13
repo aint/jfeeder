@@ -28,6 +28,8 @@ import java.util.List;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -39,6 +41,10 @@ import javax.persistence.Table;
 @javax.persistence.Entity
 @Table(name = "USER")
 @AttributeOverride(name = "id", column = @Column(name = "USER_ID", updatable = false, nullable = false))
+@NamedQueries({
+        @NamedQuery(name = "User.getByUsername", query = "FROM User WHERE username = ?"),
+        @NamedQuery(name = "User.getByEmail", query = "FROM User WHERE email = ?")
+})
 public class User extends Entity {
     private static final long serialVersionUID = -5434689193714179402L;
 
