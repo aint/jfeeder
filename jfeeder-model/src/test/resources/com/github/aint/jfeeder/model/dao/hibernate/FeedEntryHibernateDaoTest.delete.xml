@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <feed_entry feed_entry_id="1"
+                uuid="8h4ne2l1-b20jr-9d63ls-0cz2-lk730fnmqp1"
+                author="Joshua Bloch"
+                description="Effective Java. Chapter 1"
+                link="http://effectivejava.com/1"
+                published_date="2013-06-10"
+                title="Chapter 1"
+                fk_feed="1" />
+</dataset>
